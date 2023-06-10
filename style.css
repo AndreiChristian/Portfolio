@@ -37,10 +37,15 @@ body {
 }
 /* aside */
 aside {
+  flex: 1;
   align-self: flex-start;
   flex: none;
   position: sticky;
   top: 10vh;
+}
+
+.active {
+  color: red;
 }
 
 /* toggle dark mode */
