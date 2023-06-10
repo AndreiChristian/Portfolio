@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(0, 0%, 10%);
+  color: #ccc;
+}
+
+.light {
+  background-color: #ccc;
+  color: hsl(0, 0%, 10%);
+}
+
+#root {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10vh 10vw;
+  gap: 5vw;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+/* aside */
+aside {
+  align-self: flex-start;
+  flex: none;
+  position: sticky;
+  top: 10vh;
+}
+
+/* toggle dark mode */
+#toggleDarkMode {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 2vh;
+  border: none;
+  color: inherit;
+  outline: none;
+  background-color: inherit;
+}
+
+svg {
+  height: 3vh;
+  width: 3vh;
+}
