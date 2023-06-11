@@ -14,7 +14,7 @@ const asideObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 1 }
+  { threshold: 0.3 }
 );
 
 sections.forEach((section) => {

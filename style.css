@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap");
+
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -6,6 +8,10 @@
   transition: color 0.2s, background-color 0.3s;
   scroll-behavior: smooth;
   cursor: none;
+}
+:root {
+  --dark: hsl(0, 0%, 3%);
+  --light: hsl(0, 0%, 95%);
 }
 
 a {
@@ -16,16 +22,23 @@ html,
 body {
   margin: 0;
   padding: 0;
+  font-family: "Teko", sans-serif;
 }
 
 body {
-  background-color: hsl(0, 0%, 10%);
-  color: #ccc;
+  --color: var(--light);
+  --background: var(--dark);
+  background-color: var(--background);
+
+  color: var(--color);
+  font-size: larger;
 }
 
 .light {
-  background-color: #ccc;
-  color: hsl(0, 0%, 10%);
+  --color: var(--dark);
+  --background: var(--light);
+  background-color: var(--background);
+  color: var(--color);
 }
 
 #root {
@@ -33,31 +46,56 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10vh 10vw;
-  gap: 5vw;
+  padding: 10vh 5vw;
+  gap: 3vw;
   min-height: 100vh;
   min-height: 100dvh;
 }
+
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5vh;
+}
 /* aside */
 aside {
-  flex: 1;
   align-self: flex-start;
   flex: none;
   position: sticky;
   top: 10vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
+
+aside a {
+  outline: 1px solid var(--color);
+  width: 15vw;
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
+
+aside a.active {
+  background-color: var(--color);
+  color: var(--background);
+}
+
+/*  */
 
 #progressBar {
   position: fixed;
   top: 0;
   height: 5px;
   width: 100%;
-  background-color: mediumseagreen;
+  background-color: var(--color);
   z-index: 1;
-}
-
-.active {
-  color: mediumseagreen;
 }
 
 /* toggle dark mode */
@@ -88,3 +126,132 @@ svg {
   background-color: rgba(60, 179, 113, 0.5);
   border-radius: 50%;
 }
+
+/* section */
+
+section {
+  padding: 2vh 0;
+  width: 100%;
+}
+
+/* section 2 the one for skills */
+
+#section2 > div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  min-height: 90vh;
+  min-height: 90dvh;
+  border: 3px solid inherit;
+}
+
+#section2 > div div {
+  outline: 1px solid;
+  outline-color: inherit;
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  font-size: x-large;
+  transition: all 0.5s;
+}
+
+/* #section2 > div div:hover {
+  background-color: var(--color);
+  color: var(--background);
+} */
+
+#section2 > div div:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+#section2 > div div:nth-child(2) {
+  grid-column: span 2;
+}
+
+#section2 > div div:nth-child(4) {
+  grid-row: span 3;
+}
+
+#section2 > div div:nth-child(6) {
+  grid-column: span 2;
+}
+
+#section2 > div div:nth-child(7) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+#section2 > div div:nth-child(9) {
+  grid-column: span 2;
+  /* grid-row: span 3; */
+}
+
+#section2 > div div:nth-child(13) {
+  grid-row: span 2;
+}
+
+#section2 > div div:nth-child(14) {
+  grid-column: span 2;
+}
+
+#section2 > div div:nth-child(15) {
+  grid-row: span 2;
+}
+
+#section2 > div div:nth-child(19) {
+  grid-column: span 2;
+}
+
+#section2 > div div:nth-child(20) {
+  grid-column: span 2;
+}
+
+#section2 > div div {
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  overflow: hidden;
+  height: 100%;
+}
+
+#section2 > div div span {
+  height: 100%;
+  width: 100%;
+  flex: none;
+  transition: width 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#section2 > div div span:nth-child(1) {
+  height: 100%;
+  width: 100%;
+  flex: none;
+  transition: width 0.5s;
+}
+
+#section2 > div div span:nth-child(2) {
+  color: var(--background);
+  background-color: var(--color);
+  width: 100%;
+  height: 100%;
+  flex: none;
+  font-size: medium;
+}
+
+#section2 > div div:hover span:nth-child(1) {
+  width: 0;
+}
+
+/*  */
+
+/* @media (max-width: 1000px) {
+  aside {
+    display: none;
+  }
+
+  #cursor {
+    display: none;
+  }
+} */
