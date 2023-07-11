@@ -8,6 +8,8 @@
   transition: color 0.2s, background-color 0.3s;
   scroll-behavior: smooth;
   cursor: none;
+
+  /* outline: 1px solid red; */
 }
 :root {
   --dark: hsl(0, 0%, 3%);
@@ -20,6 +22,13 @@ a {
 
 h1 {
   font-size: clamp(1.6rem, 5vw, 2.7rem);
+}
+
+p,
+span,
+a,
+button {
+  font-size: x-large;
 }
 
 html,
@@ -54,15 +63,32 @@ body {
   gap: 3vw;
   min-height: 100vh;
   min-height: 100dvh;
+  /* max-width: 100%; */
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: 1vw;
+  }
 }
 
 #container {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 5vh;
+  box-sizing: border-box;
 }
+
+@media (max-width: 768px) {
+  #container {
+    box-sizing: border-box;
+    /* padding: 0 5vw; */
+  }
+}
+
 /* aside */
 aside {
   align-self: flex-start;
@@ -134,8 +160,9 @@ svg {
 /* section */
 
 section {
-  padding: 2vh 0;
+  padding: 2vw 0;
   width: 100%;
+  box-sizing: border-box;
 }
 
 /* section 2 the one for skills */
@@ -250,7 +277,7 @@ section {
 
 /*  */
 
-/* @media (max-width: 1000px) {
+@media (max-width: 1000px) {
   aside {
     display: none;
   }
@@ -258,19 +285,26 @@ section {
   #cursor {
     display: none;
   }
-} */
+}
 
 .carousel {
+  position: relative;
+  z-index: 0;
+
+  width: 100%;
   display: flex;
-  overflow-x: auto;
+  overflow-x: scroll;
   scroll-snap-type: x mandatory;
+  /* scrollbar-base-color: transparent; */
 }
 
 .carousel__card {
+  position: relative;
+  z-index: -1;
   flex: 0 0 auto;
   margin-right: 5vw;
   width: 100%; /* Adjust as needed */
-  height: 75vh;
+  height: 90vh;
   scroll-snap-align: start;
   border: 1px solid var(--color);
 
@@ -287,7 +321,7 @@ section {
 
 .carousel__card img {
   object-fit: cover;
-  height: 60%;
+  height: 40%;
   width: 100%;
   border-bottom: 1px solid var(--color);
 
@@ -301,6 +335,13 @@ section {
 
 .carousel__card p {
   width: 70%;
+}
+
+@media (max-width: 768px) {
+  .carousel__card .actions {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .carousel__card .actions {
@@ -403,4 +444,33 @@ footer {
 
 .footer-container p {
   margin-top: 20px;
+}
+
+/* CSS for larger screens */
+
+/* CSS for smaller screens */
+@media (max-width: 1000px) {
+  section {
+    max-width: 100%;
+    padding: 0 2vw;
+  }
+}
+
+.carousel_buttons {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+}
+
+.carousel__card {
+  /* Add the transition effect */
+  transition: opacity 0.5s, filter 0.5s;
+}
+
+.carousel__card.hidden {
+  opacity: 0.5;
+  filter: blur(5px);
 }
