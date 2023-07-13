@@ -1,7 +1,7 @@
 const projects = [
   {
     title: "Pupper palette",
-    image: "../assets/images/beagle.png",
+    image: "assets/images/beagle.png",
     description:
       "Pupper Palette - an online store for digital art built with React.",
     liveLink: "https://pupper-d9d8b.web.app/",
@@ -9,28 +9,28 @@ const projects = [
   },
   {
     title: "Pupper Rest",
-    image: "../assets/images/pupperRest.png",
+    image: "assets/images/pupperRest.png",
     description: "A lighweight REST API filled with canine data, built with Express and powered by a PostgreSQL",
     liveLink: "https://expressjs-postgres-production-f8f8.up.railway.app/",
     codeLink: "https://github.com/AndreiChristian/pupperRest",
   },
   {
     title: "I made a promise",
-    image: "../assets/images/IMadeAPromise.png",
+    image: "assets/images/IMadeAPromise.png",
     description: "Detective story about promises in Javascript",
     liveLink: "https://andreichristian.github.io/IMadeAPromise/",
     codeLink: "https://github.com/AndreiChristian/IMadeAPromise",
   },
   {
     title: "Wiz Sort",
-    image: "../assets/images/WizSort.png",
+    image: "assets/images/WizSort.png",
     description: "Perfect for visualizing sorting algorithms",
     liveLink: "https://sort-viz-portfolio.web.app/",
     codeLink: "https://github.com/AndreiChristian/sortViz",
   },
   {
     title: "LVX",
-    image: "../assets/images/LVX.png",
+    image: "assets/images/LVX.png",
     description:
       "LVX is a project in development for a luxury villa company with two Angular Apps, two React Native Apps, and a backend built with Node, Express, PostgreSQL, Websockets",
 
@@ -38,7 +38,7 @@ const projects = [
   },
   {
     title: "Chip Chirip",
-    image: "../assets/images/chip.png",
+    image: "assets/images/chip.png",
     description: "Chip Chirip is a chat app in development that includes a Angular front end and Node, Express, Websockets and PostgreSQL backend ",
     // liveLink: "https://live-link-2.com",
     codeLink: "https://github.com/AndreiChristian/chipchirip_server",
