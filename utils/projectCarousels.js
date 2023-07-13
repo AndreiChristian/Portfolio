@@ -17,14 +17,14 @@ const projects = [
   {
     title: "I made a promise",
     image: "../assets/images/IMadeAPromise.png",
-    description: "This is the second project.",
+    description: "Detective story about promises in Javascript",
     liveLink: "https://andreichristian.github.io/IMadeAPromise/",
     codeLink: "https://github.com/AndreiChristian/IMadeAPromise",
   },
   {
     title: "Wiz Sort",
     image: "../assets/images/WizSort.png",
-    description: "This is the second project.",
+    description: "Perfect for visualizing sorting algorithms",
     liveLink: "https://sort-viz-portfolio.web.app/",
     codeLink: "https://github.com/AndreiChristian/sortViz",
   },
