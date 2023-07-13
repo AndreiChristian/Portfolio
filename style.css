@@ -7,7 +7,6 @@
   list-style: none;
   transition: color 0.2s, background-color 0.3s;
   scroll-behavior: smooth;
-  cursor: none;
 
   /* outline: 1px solid red; */
 }
@@ -148,13 +147,17 @@ svg {
 /* cursor
  */
 
-#cursor {
+/* #cursor {
   position: fixed;
   z-index: 100;
   height: 3vh;
   width: 3vh;
   background-color: rgba(60, 179, 113, 0.5);
   border-radius: 50%;
+} */
+
+#cursor {
+  display: none;
 }
 
 /* section */
@@ -473,4 +476,19 @@ footer {
 .carousel__card.hidden {
   opacity: 0.5;
   filter: blur(5px);
+}
+
+.contacts{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 2vw;
+}
+
+.contacts a svg {
+  width: 5vh;
+  height: 5vh;
+  stroke: var(--color);
+  fill: var(--color);
 }

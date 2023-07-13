@@ -2,6 +2,13 @@ const projects = [
   {
     title: "Pupper palette",
     image: "../assets/images/beagle.png",
+    description: "Pupper Palette - an online store for digital art built with React.",
+    liveLink: "https://pupper-d9d8b.web.app/",
+    codeLink: "https://github.com/username/project1",
+  },
+  {
+    title: "Pupper palette",
+    image: "../assets/images/beagle.png",
     description: "This is the first project.",
     liveLink: "https://pupper-d9d8b.web.app/",
     codeLink: "https://github.com/username/project1",
