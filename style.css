@@ -307,7 +307,7 @@ section {
   flex: 0 0 auto;
   margin-right: 5vw;
   width: 100%; /* Adjust as needed */
-  height: 90vh;
+  height: 80vh;
   scroll-snap-align: start;
   border: 1px solid var(--color);
 
